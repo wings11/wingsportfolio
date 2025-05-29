@@ -1,6 +1,9 @@
-import React from "react";
-function Pre(props) {
-  return <div id={props.load ? "preloader" : "preloader-none"}></div>;
-}
+// import { Quantum } from 'ldrs/react'
+// import 'ldrs/react/Quantum.css'
 
-export default Pre;
+// // Default values shown
+// <Quantum
+//   size="70"
+//   speed="1.75"
+//   color="black" 
+// />

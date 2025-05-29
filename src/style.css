@@ -5,6 +5,8 @@ html {
     rgba(12, 8, 24, 0.904)
   );
 
+
+ 
   --image-gradient: linear-gradient(
     to bottom left,
     rgba(17, 16, 16, 0.678),
@@ -25,17 +27,18 @@ button:focus {
 /* --------- */
 /*  Preloader */
 /* --------- */
-#preloader {
+.preloader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 999999;
-  background-color: #0c0513;
-  background-image: url(./Assets/pre.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+  background: #1a1a1a; /* Dark background for neon effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out;
 }
 
 #preloader-none {
@@ -66,9 +69,11 @@ button:focus {
   border-radius: 12px;
 }
 
+
+
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(222, 130, 235, 0.911);
+  background: rgba(66, 123, 247, 0.911);
   border-radius: 12px;
 }
 
@@ -97,7 +102,7 @@ button:focus {
 
 .navbar-toggler span {
   display: block !important;
-  background-color: #be50f4 !important;
+  background-color: #5060f4 !important;
   height: 4px !important;
   width: 27px !important;
   margin-top: 5px !important;
@@ -139,6 +144,12 @@ button:focus {
   transform: rotate(-135deg) !important;
   opacity: 0.9 !important;
 }
+@media(min-width: 768px) and (max-width: 1440px){
+    .img-fluid1{
+    padding-top: 30px;
+  }
+}
+
 
 @media (max-width: 767px) {
   .navbar {
@@ -194,15 +205,36 @@ button:focus {
   height: 5px;
   width: 0;
   border-radius: 16px;
-  background: #c95bf5;
+  background: #ff0000; /* Classic red */
+  box-shadow:
+    0 0 5px #ff0000,
+    0 0 10px #ff0000,
+    0 0 20px rgba(255, 0, 0, 0.7); /* Neon glow effect */
   bottom: 1px;
   left: 0;
   z-index: -1;
   transition: all 0.3s ease-out 0s;
 }
 
+/* Optional: Animated Neon Glow */
+@keyframes neonGlowRed {
+  0%, 100% {
+    box-shadow:
+      0 0 5px #ff0000,
+      0 0 10px #ff0000,
+      0 0 20px rgba(255, 0, 0, 0.7);
+  }
+  50% {
+    box-shadow:
+      0 0 8px #ff0000,
+      0 0 15px #ff0000,
+      0 0 30px rgba(255, 0, 0, 0.5);
+  }
+}
+
 .navbar-nav .nav-item a:hover::after {
   width: 100%;
+  animation: neonGlowRed 1.5s ease-in-out infinite; /* Apply animation on hover */
 }
 
 /* --------- */
@@ -276,13 +308,20 @@ button:focus {
 }
 
 .heading-name {
-  font-size: 2.5em !important;
-  padding-left: 45px !important;
+  font-size: 2.5em ;
+  padding-left: 45px ;
 }
 
+
+
 .main-name {
-  color: #cd5ff8;
+  color: #1e90ff; /* Classic blue */
+ 
 }
+
+
+
+
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
@@ -303,6 +342,8 @@ button:focus {
   .Typewriter__cursor {
     display: none !important;
   }
+
+
 }
 
 .myAvtar {

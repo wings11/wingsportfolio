@@ -24,8 +24,14 @@
   color: white;
 }
 
+@keyframes neonGlow {
+  0%, 100% { text-shadow: 0 0 5px #61dafb, 0 0 10px #61dafb, 0 0 20px #61dafb, 0 0 40px rgba(97, 218, 251, 0.7); }
+  50% { text-shadow: 0 0 8px #61dafb, 0 0 15px #61dafb, 0 0 30px #61dafb, 0 0 60px rgba(97, 218, 251, 0.5); }
+}
+
 .App-link {
   color: #61dafb;
+  animation: neonGlow 1.5s ease-in-out infinite;
 }
 
 @keyframes App-logo-spin {
@@ -36,3 +42,5 @@
     transform: rotate(360deg);
   }
 }
+
+

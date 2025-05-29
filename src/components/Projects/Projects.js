@@ -2,12 +2,12 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import yarsu from "../../Assets/Projects/YarSu.png";
+
+import Kham from "../../Assets/Projects/Kham.png";
+import shalpal from "../../Assets/Projects/shalpal.png";
+import hybriddev from "../../Assets/Projects/hybriddev.png";
+import tm from "../../Assets/Projects/tm.png";
 
 function Projects() {
   return (
@@ -15,78 +15,75 @@ function Projects() {
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          My <strong className="purple">Projects </strong>
         </h1>
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+          All of these below are test versions of my real world projects.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={shalpal}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="Shal Pal"
+              description="This project is my first real world project which is a restaurant  website build with React.js and Node.js. The website is responsive and has a modern design. Admin can generate QR code for the menu items and can also view the orders placed by the customers. Customers can scan the qr code and view menu, and create order. The admin will recieve notification after customer create order or ring the bell. The admin side also has graphs, charts and pies shown for sales report.
+             "
+
+              username="username : shalpal@gmail.com"
+              password="password : shalpalshalpal"
+               demoLink="https://shalpal.netlify.app/login"
+             
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={tm}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="Tamar Myay"
+              description="In this project, I mainly have to focus on backend development. I have used Node.js, Express.js, and Psql for the backend development. The project is a restaurant management and pos system where admin can manage the restaurant, menu items, and orders. Admin can also view the sales report in the form of graphs, charts, and pies."
+              username="username : admin"
+              password="password : tm123!@#"
+              demoLink="https://tamarmyay-frontend-last.onrender.com/login"
             />
           </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={editor}
-              isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
-            />
-          </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={hybriddev}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="Hybrid Dev"
+              description="A simple web app for managing your daily tasks. The app allows users to create, read, update, and delete tasks. It also has a feature to mark tasks as completed. The app is responsive and has a modern design. This app is built for Hybrid Dev Company for their internal use. The app is built with React.js and Node.js. The app is hosted on Railway."
+              username="username : Wings"
+              password="password : hybriddev"
+              demoLink="https://hybrid-dev.up.railway.app/"
+              
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={Kham}
+              isBlog={false}
+              title="Kham Portfolio"
+              description="A single page portfolio website built with React.js, threejs and GSAP. The website is responsive and has a modern design. The website has a section for projects, skills, and contact information. The website is hosted on Netlify. This website is built for my fellow classmate."
+              
+              demoLink="https://kham-portfolio.netlify.app/"              
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={yarsu}
+              isBlog={false}
+              title="Yar Su"
+              description="This app is still in development phase. The demo link will be available as soon as the app is completed. The app is built with React Native and Node.js."
+              
             />
           </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col>
+          
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
-            />
-          </Col>
+          
         </Row>
       </Container>
     </Container>

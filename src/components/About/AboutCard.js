@@ -1,40 +1,37 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import { ImPointRight } from "react-icons/im";
 
+import { IoLogoGameControllerB } from "react-icons/io";
+import { FaGuitar } from "react-icons/fa6";
+import { MdCardTravel } from "react-icons/md";
 function AboutCard() {
   return (
     <Card className="quote-card-view">
       <Card.Body>
         <blockquote className="blockquote mb-0">
-          <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Soumyajit Behera </span>
-            from <span className="purple"> Bhubaneswar, India.</span>
+          <p style={{ textAlign: "left" }}>
+            Hello Everyone, I am <span className="purple">Wings.</span>
             <br />
-            I am currently employed as a software developer at Juspay.
+            I am a <span className="purple">Full-Stack Developer</span> passionate about building scalable, user-friendly web applications
             <br />
-            I have completed Integrated MSc (IMSc) in Maths and Computing at BIT
-            Mesra.
+            I have completed <span className="purple">B.Sc Computer Science</span> from <b>University of Greenwich </b>and <span className="purple">B.Sc Information and Communication Technology</span> from <b>Rangsit University.</b>
             <br />
             <br />
-            Apart from coding, some other activities that I love to do!
+            Apart from coding, there are a few hobbies of mine which I enjoy:
           </p>
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Playing Games
+              <IoLogoGameControllerB /> Playing <span className="purple">Albion Online</span>
             </li>
             <li className="about-activity">
-              <ImPointRight /> Writing Tech Blogs
+              <FaGuitar /> Playing <span className="purple">Guitar</span>
             </li>
             <li className="about-activity">
-              <ImPointRight /> Travelling
+              <MdCardTravel /> <span className="purple">Travelling</span>
             </li>
           </ul>
 
-          <p style={{ color: "rgb(155 126 172)" }}>
-            "Strive to build things that make a difference!"{" "}
-          </p>
-          <footer className="blockquote-footer">Soumyajit</footer>
+          
         </blockquote>
       </Card.Body>
     </Card>
